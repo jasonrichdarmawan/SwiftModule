@@ -20,6 +20,12 @@
 		964B4D522AFAB9A900470E31 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B4D512AFAB9A900470E31 /* Component.swift */; };
 		964B4D542AFAB9D100470E31 /* App1SecondPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B4D532AFAB9D100470E31 /* App1SecondPage.swift */; };
 		964B4D562AFABA0A00470E31 /* App1SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B4D552AFABA0A00470E31 /* App1SecondViewModel.swift */; };
+		964B4D6C2AFB1B3D00470E31 /* printIfDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B4D6B2AFB1B3D00470E31 /* printIfDebug.swift */; };
+		964B4D6F2AFB1BB500470E31 /* App2Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B4D6E2AFB1BB500470E31 /* App2Routing.swift */; };
+		964B4D732AFB1BE500470E31 /* App2FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B4D722AFB1BE500470E31 /* App2FirstPage.swift */; };
+		964B4D752AFB1C0400470E31 /* App2SecondPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B4D742AFB1C0400470E31 /* App2SecondPage.swift */; };
+		964B4D782AFB1C3A00470E31 /* App2FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B4D772AFB1C3A00470E31 /* App2FirstViewModel.swift */; };
+		964B4D7A2AFB1C4900470E31 /* App2SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B4D792AFB1C4900470E31 /* App2SecondViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +45,13 @@
 		964B4D512AFAB9A900470E31 /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		964B4D532AFAB9D100470E31 /* App1SecondPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App1SecondPage.swift; sourceTree = "<group>"; };
 		964B4D552AFABA0A00470E31 /* App1SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App1SecondViewModel.swift; sourceTree = "<group>"; };
+		964B4D692AFB1AC800470E31 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		964B4D6B2AFB1B3D00470E31 /* printIfDebug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = printIfDebug.swift; sourceTree = "<group>"; };
+		964B4D6E2AFB1BB500470E31 /* App2Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App2Routing.swift; sourceTree = "<group>"; };
+		964B4D722AFB1BE500470E31 /* App2FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App2FirstPage.swift; sourceTree = "<group>"; };
+		964B4D742AFB1C0400470E31 /* App2SecondPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App2SecondPage.swift; sourceTree = "<group>"; };
+		964B4D772AFB1C3A00470E31 /* App2FirstViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App2FirstViewModel.swift; sourceTree = "<group>"; };
+		964B4D792AFB1C4900470E31 /* App2SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App2SecondViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +68,7 @@
 		964B4D172AFAA98A00470E31 = {
 			isa = PBXGroup;
 			children = (
+				964B4D692AFB1AC800470E31 /* .gitignore */,
 				964B4D212AFAA98A00470E31 /* Products */,
 				964B4D502AFAB8E300470E31 /* README.md */,
 				964B4D222AFAA98A00470E31 /* SwiftModule */,
@@ -87,6 +101,7 @@
 				964B4D3C2AFAABED00470E31 /* AppViewModel.swift */,
 				964B4D372AFAAA7A00470E31 /* AppPage.swift */,
 				964B4D4C2AFAB09800470E31 /* Core */,
+				964B4D6A2AFB1B3000470E31 /* Utils */,
 				964B4D3F2AFAAE0300470E31 /* Features */,
 			);
 			path = app;
@@ -113,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				964B4D402AFAAE0A00470E31 /* app1 */,
+				964B4D6D2AFB1BAB00470E31 /* app2 */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -168,6 +184,50 @@
 				964B4D4E2AFAB0A800470E31 /* Route.swift */,
 			);
 			path = Routing;
+			sourceTree = "<group>";
+		};
+		964B4D6A2AFB1B3000470E31 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				964B4D6B2AFB1B3D00470E31 /* printIfDebug.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		964B4D6D2AFB1BAB00470E31 /* app2 */ = {
+			isa = PBXGroup;
+			children = (
+				964B4D702AFB1BCD00470E31 /* Presentation */,
+				964B4D6E2AFB1BB500470E31 /* App2Routing.swift */,
+			);
+			path = app2;
+			sourceTree = "<group>";
+		};
+		964B4D702AFB1BCD00470E31 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				964B4D762AFB1C2F00470E31 /* ViewModels */,
+				964B4D712AFB1BDC00470E31 /* Pages */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		964B4D712AFB1BDC00470E31 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				964B4D722AFB1BE500470E31 /* App2FirstPage.swift */,
+				964B4D742AFB1C0400470E31 /* App2SecondPage.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		964B4D762AFB1C2F00470E31 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				964B4D772AFB1C3A00470E31 /* App2FirstViewModel.swift */,
+				964B4D792AFB1C4900470E31 /* App2SecondViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,13 +302,19 @@
 				964B4D4F2AFAB0A800470E31 /* Route.swift in Sources */,
 				964B4D472AFAAE8200470E31 /* App1FirstViewModel.swift in Sources */,
 				964B4D382AFAAA7A00470E31 /* AppPage.swift in Sources */,
+				964B4D6C2AFB1B3D00470E31 /* printIfDebug.swift in Sources */,
+				964B4D782AFB1C3A00470E31 /* App2FirstViewModel.swift in Sources */,
 				964B4D542AFAB9D100470E31 /* App1SecondPage.swift in Sources */,
 				964B4D442AFAAE3600470E31 /* App1FirstPage.swift in Sources */,
 				964B4D242AFAA98A00470E31 /* AppDelegate.swift in Sources */,
 				964B4D562AFABA0A00470E31 /* App1SecondViewModel.swift in Sources */,
+				964B4D732AFB1BE500470E31 /* App2FirstPage.swift in Sources */,
 				964B4D4B2AFAB08A00470E31 /* AppRouting.swift in Sources */,
+				964B4D6F2AFB1BB500470E31 /* App2Routing.swift in Sources */,
+				964B4D752AFB1C0400470E31 /* App2SecondPage.swift in Sources */,
 				964B4D3D2AFAABED00470E31 /* AppViewModel.swift in Sources */,
 				964B4D492AFAAFBD00470E31 /* App1Routing.swift in Sources */,
+				964B4D7A2AFB1C4900470E31 /* App2SecondViewModel.swift in Sources */,
 				964B4D262AFAA98A00470E31 /* SceneDelegate.swift in Sources */,
 				964B4D522AFAB9A900470E31 /* Component.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  App1ViewModel.swift
+//  App2SecondViewModel.swift
 //  SwiftModule
 //
 //  Created by Jason Rich Darmawan Onggo Putra on 08/11/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class App1FirstViewModel: ObservableObject {
+final class App2SecondViewModel: ObservableObject {
     private let id: UUID
     
     init(
