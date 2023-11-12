@@ -12,7 +12,10 @@ let app1Routes: Routes = [
         path: "firstPage",
         loadComponent: {
             return App1FirstPage(
-                viewModel: App1FirstViewModel()
+                appViewModel: AppViewModel.shared(),
+                viewModel: App1FirstViewModel.shared(
+                    counter: 3
+                )
             )
         }
     ),
@@ -20,7 +23,7 @@ let app1Routes: Routes = [
         path: "secondPage",
         loadComponent: {
             return App1SecondPage(
-                viewModel: App1SecondViewModel()
+                viewModel: App1SecondViewModel.shared()
             )
         }
     )

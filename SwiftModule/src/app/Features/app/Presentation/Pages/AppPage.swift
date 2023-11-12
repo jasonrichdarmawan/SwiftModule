@@ -8,15 +8,32 @@
 import SwiftUI
 
 struct AppPage: Component {
+    private let id: UUID
     @ObservedObject var viewModel: AppViewModel
     
+    init(
+        id: UUID = UUID(),
+        viewModel: AppViewModel
+    ) {
+        self.id = id
+        self.viewModel = viewModel
+        printIfDebug("\(type(of: self)) \(#function) \(id)")
+    }
+    
     var body: some View {
-        VStack {
-            HStack {
+        VStack(
+            spacing: 0
+        ) {
+            HStack(
+                spacing: 0
+            ) {
                 Text("AppView works!")
                 Spacer()
             }
-            HStack {
+            
+            HStack(
+                spacing: 0
+            ) {
                 Button {
                     _ = Router.route(path: "app1/firstPage")
                 } label: {
@@ -24,11 +41,25 @@ struct AppPage: Component {
                 }
                 Spacer()
             }
+            
+            VStack(
+                spacing: 0
+            ) {
+                Text("AppPage counter")
+                CounterComponent(counter: $viewModel.counter)
+            }
+            .padding(.all, 16)
+            .border(.primary)
+            
             Spacer()
         }
     }
 }
 
 #Preview {
-    AppPage(viewModel: AppViewModel())
+    AppPage(
+        viewModel: AppViewModel.shared(
+            counter: 2
+        )
+    )
 }

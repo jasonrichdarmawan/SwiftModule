@@ -20,3 +20,18 @@ final class App2SecondViewModel: ObservableObject {
         printIfDebug("\(type(of: self)) \(#function) \(id)")
     }
 }
+
+extension App2SecondViewModel {
+    static func shared() -> App2SecondViewModel {
+        var temp: App2SecondViewModel
+        
+        if _shared == nil {
+            temp = App2SecondViewModel()
+            _shared = temp
+        }
+        
+        return _shared!
+    }
+    
+    private static weak var _shared: App2SecondViewModel?
+}

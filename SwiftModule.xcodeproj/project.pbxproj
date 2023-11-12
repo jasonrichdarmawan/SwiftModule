@@ -31,6 +31,7 @@
 		967124C02B01084C00E0DCB4 /* App1Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967124BF2B01084C00E0DCB4 /* App1Module.swift */; };
 		967124C22B0109C800E0DCB4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967124C12B0109C700E0DCB4 /* Router.swift */; };
 		967124C42B0113CD00E0DCB4 /* App2Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967124C32B0113CD00E0DCB4 /* App2Module.swift */; };
+		967124CC2B01337000E0DCB4 /* CounterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967124CB2B01337000E0DCB4 /* CounterComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		967124C12B0109C700E0DCB4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		967124C32B0113CD00E0DCB4 /* App2Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App2Module.swift; sourceTree = "<group>"; };
 		967124C62B011CDE00E0DCB4 /* SwiftModule - Module and Component.drawio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwiftModule - Module and Component.drawio.png"; sourceTree = "<group>"; };
+		967124CB2B01337000E0DCB4 /* CounterComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		964B4D3F2AFAAE0300470E31 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				967124C72B01335200E0DCB4 /* counter */,
 				967124BB2B0101CD00E0DCB4 /* app */,
 				964B4D402AFAAE0A00470E31 /* app1 */,
 				964B4D6D2AFB1BAB00470E31 /* app2 */,
@@ -287,6 +290,38 @@
 			path = README;
 			sourceTree = "<group>";
 		};
+		967124C72B01335200E0DCB4 /* counter */ = {
+			isa = PBXGroup;
+			children = (
+				967124C82B01335B00E0DCB4 /* Presentation */,
+			);
+			path = counter;
+			sourceTree = "<group>";
+		};
+		967124C82B01335B00E0DCB4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				967124CA2B01336600E0DCB4 /* Components */,
+				967124C92B01336200E0DCB4 /* ViewModels */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		967124C92B01336200E0DCB4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		967124CA2B01336600E0DCB4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				967124CB2B01337000E0DCB4 /* CounterComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -360,6 +395,7 @@
 				964B4D4F2AFAB0A800470E31 /* Route.swift in Sources */,
 				967124BA2B01018100E0DCB4 /* AppModule.swift in Sources */,
 				967124C42B0113CD00E0DCB4 /* App2Module.swift in Sources */,
+				967124CC2B01337000E0DCB4 /* CounterComponent.swift in Sources */,
 				964B4D472AFAAE8200470E31 /* App1FirstViewModel.swift in Sources */,
 				964B4D382AFAAA7A00470E31 /* AppPage.swift in Sources */,
 				964B4D6C2AFB1B3D00470E31 /* printIfDebug.swift in Sources */,

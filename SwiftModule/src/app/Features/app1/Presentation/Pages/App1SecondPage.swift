@@ -8,7 +8,17 @@
 import SwiftUI
 
 struct App1SecondPage: Component {
+    private let id: UUID
     @ObservedObject var viewModel: App1SecondViewModel
+    
+    init(
+        id: UUID = UUID(),
+        viewModel: App1SecondViewModel
+    ) {
+        self.id = id
+        self.viewModel = viewModel
+        printIfDebug("\(type(of: self)) \(#function) \(id)")
+    }
     
     var body: some View {
         VStack {

@@ -66,7 +66,9 @@ struct AppPage: Component {
 - [ ] push / modal transition.
 - [ ] loadComponent accept parameters.
 - [ ] loadChildren accept parameters.
-- [ ] can navigate like this: 
+- [x] shared state.
+
+    Definition of done:
     1. AppPage -> 2
     2. App1FirstPage -> 3
     3. App1SecondPage -> 4
@@ -74,7 +76,7 @@ struct AppPage: Component {
     5. App2SecondPage -> 6
     6. App1FirstPage
     
-        App1FirstPage should use the same App1FirstViewModel and do not create new ViewModel.
+        (6) App1FirstPage should use the same App1FirstViewModel and do not create new ViewModel.
 
 # Second Priority To Do
 

@@ -11,7 +11,11 @@ let appRoutes: Routes = [
     Route(
         path: "",
         loadComponent: {
-            return AppPage(viewModel: AppViewModel())
+            return AppPage(
+                viewModel: AppViewModel.shared(
+                    counter: 2
+                )
+            )
         }
     ),
     Route(

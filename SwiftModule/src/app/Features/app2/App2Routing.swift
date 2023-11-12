@@ -11,13 +11,17 @@ let app2Routes: Routes = [
     Route(
         path: "firstPage",
         loadComponent: {
-            return App2FirstPage(viewModel: App2FirstViewModel())
+            return App2FirstPage(
+                viewModel: App2FirstViewModel.shared()
+            )
         }
     ),
     Route(
         path: "secondPage",
         loadComponent: {
-            return App2SecondPage(viewModel: App2SecondViewModel())
+            return App2SecondPage(
+                viewModel: App2SecondViewModel.shared()
+            )
         }
     )
 ]
