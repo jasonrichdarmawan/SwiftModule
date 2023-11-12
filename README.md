@@ -2,6 +2,10 @@
 
 [Angular Module](https://angular.io/guide/architecture-modules)
 
+# Architecture
+
+![Architecture](./README/SwiftModule%20-%20Module%20and%20Component.drawio.png)
+
 # Code Example
 
 AppRouting.swift

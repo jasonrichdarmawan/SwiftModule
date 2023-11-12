@@ -62,6 +62,7 @@
 		967124BF2B01084C00E0DCB4 /* App1Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App1Module.swift; sourceTree = "<group>"; };
 		967124C12B0109C700E0DCB4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		967124C32B0113CD00E0DCB4 /* App2Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App2Module.swift; sourceTree = "<group>"; };
+		967124C62B011CDE00E0DCB4 /* SwiftModule - Module and Component.drawio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwiftModule - Module and Component.drawio.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,7 @@
 		964B4D172AFAA98A00470E31 = {
 			isa = PBXGroup;
 			children = (
+				967124C52B011CD000E0DCB4 /* README */,
 				964B4D692AFB1AC800470E31 /* .gitignore */,
 				964B4D212AFAA98A00470E31 /* Products */,
 				964B4D502AFAB8E300470E31 /* README.md */,
@@ -275,6 +277,14 @@
 				964B4D3C2AFAABED00470E31 /* AppViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		967124C52B011CD000E0DCB4 /* README */ = {
+			isa = PBXGroup;
+			children = (
+				967124C62B011CDE00E0DCB4 /* SwiftModule - Module and Component.drawio.png */,
+			);
+			path = README;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
