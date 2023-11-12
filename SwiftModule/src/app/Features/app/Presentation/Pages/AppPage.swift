@@ -18,7 +18,7 @@ struct AppPage: Component {
             }
             HStack {
                 Button {
-                    Router.route(path: "app1/firstPage")
+                    _ = Router.route(path: "app1/firstPage")
                 } label: {
                     Text("Go to App1FirstPage")
                 }

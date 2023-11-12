@@ -19,7 +19,7 @@ struct App1SecondPage: Component {
             
             HStack {
                 Button {
-                    Router.route(path: "app2/firstPage")
+                    _ = Router.route(path: "app2/firstPage")
                 } label: {
                     Text("Go to App2FirstPage")
                 }

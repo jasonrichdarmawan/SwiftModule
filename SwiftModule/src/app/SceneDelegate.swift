@@ -23,8 +23,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window = UIWindow(windowScene: windowScene)
         
-        guard let rootViewController = appModule.loadInitialPath()
-        else { return }
+        let result = appModule.loadInitialPath()
+        
+        guard let rootViewController = try? result.get() else { return }
         
         navigationController.pushViewController(rootViewController, animated: true)
         

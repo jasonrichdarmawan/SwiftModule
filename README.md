@@ -59,9 +59,22 @@ struct AppPage: Component {
 
 # First Priority To Do
 
-- [ ] appRoutes can route to app1Routes
-- [ ] a Component can route with `context.pushRoute("/app1/first")`
-- [ ] Component.createInstance can inject dependency.
+- [x] appRoutes can route to app1Routes
+- [x] a Component can route with `Router.route("/app1/first")`
+- [ ] ~~Component.createInstance can inject dependency.~~
+- [ ] recursive function to handle more than 2 nested routes i.e. "app1/feature1/firstPage"
+- [ ] push / modal transition.
+- [ ] loadComponent accept parameters.
+- [ ] loadChildren accept parameters.
+- [ ] can navigate like this: 
+    1. AppPage -> 2
+    2. App1FirstPage -> 3
+    3. App1SecondPage -> 4
+    4. App2FirstPage -> 5
+    5. App2SecondPage -> 6
+    6. App1FirstPage
+    
+        App1FirstPage should use the same App1FirstViewModel and do not create new ViewModel.
 
 # Second Priority To Do
 

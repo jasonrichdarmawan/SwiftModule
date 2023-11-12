@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+enum RouteError: Error {
+    case badPath(_ message: String)
+    case unexpectedError(_ message: String)
+    case routeNotFound
+    case badRoute(_ message: String)
+}
+
 final class Router {
     /**
      - Parameters:
@@ -19,15 +26,18 @@ final class Router {
      - TODO: recursive function to handle more than 2 nested routes i.e. "app1/feature1/firstPage"
      - TODO: push / modal transition.
      */
-    static func route(path: String) {
-        if path.isEmpty { return }
+    static func route(path: String) -> Result<Bool, RouteError> {
+        if path.isEmpty {
+            printIfDebug("\(type(of: self)) \(#function) error: path is empty")
+            return .failure(.badPath("path is empty"))
+        }
         
         let subsequences = path.split(separator: "/")
         
         guard let subsequence = subsequences.first
         else {
-            printIfDebug("\(type(of: self)) \(#function) // TODO: return error: unexpected error.")
-            return
+            printIfDebug("\(type(of: self)) \(#function) unexpected error: path is empty")
+            return .failure(.unexpectedError("path is empty"))
         }
         
         guard let route = appRoutes.first(
@@ -36,16 +46,15 @@ final class Router {
             }
         )
         else {
-            printIfDebug("\(type(of: self)) \(#function) // TODO: return error: route not found.")
-            return
+            return .failure(.routeNotFound)
         }
         
         // loadComponent
         if subsequences.count == 1 {
             guard let loadComponent = route.loadComponent
             else {
-                printIfDebug("\(type(of: self)) \(#function) // TODO: return error: expect loadComponent is not nil.")
-                return
+                printIfDebug("\(type(of: self)) \(#function) error: expect loadComponent is not nil.")
+                return .failure(.badRoute("expect loadComponent is not nil."))
             }
             
             let component = loadComponent()
@@ -56,15 +65,15 @@ final class Router {
             
             navigationController.pushViewController(viewController, animated: true)
             
-            printIfDebug("\(type(of: self)) \(#function) // TODO: return success.")
-            return
+            printIfDebug("\(type(of: self)) \(#function) success")
+            return .success(true)
         }
         
         // loadChildren
         guard let loadChildren = route.loadChildren
         else {
-            printIfDebug("\(type(of: self)) \(#function) // TODO: return error: expect loadChildren is not nil.")
-            return
+            printIfDebug("\(type(of: self)) \(#function) error: expect loadChildren is not nil.")
+            return .failure(.badRoute("expect loadChildren is not nil."))
         }
         
         let module = loadChildren()
@@ -73,15 +82,15 @@ final class Router {
             route.path == subsequences[1]
         })
         else {
-            printIfDebug("\(type(of: self)) \(#function) // TODO: return error: route not found.")
-            return
+            printIfDebug("\(type(of: self)) \(#function) error: route not found.")
+            return .failure(.routeNotFound)
         }
         
         // loadComponent
         guard let moduleLoadComponent = moduleRoute.loadComponent
         else {
-            printIfDebug("\(type(of: self)) \(#function) // TODO: return error: expect loadComponent is not nil.")
-            return
+            printIfDebug("\(type(of: self)) \(#function) error: expect loadComponent is not nil.")
+            return .failure(.badRoute("expect loadComponent is not nil."))
         }
         
         let moduleComponent = moduleLoadComponent()
@@ -92,7 +101,7 @@ final class Router {
         
         navigationController.pushViewController(viewController, animated: true)
         
-        printIfDebug("// TODO: return success")
-        return
+        printIfDebug("\(type(of: self)) \(#function) success")
+        return .success(true)
     }
 }

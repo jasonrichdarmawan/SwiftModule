@@ -12,20 +12,25 @@ struct Module {
     let routes: Routes
 }
 
+enum ModuleError: Error {
+    case routeNotFound
+    case badRoute(_ message: String)
+}
+
 extension Module {
-    func loadInitialPath() -> UIViewController? {
+    func loadInitialPath() -> Result<UIViewController, ModuleError> {
         guard let route = routes.first(where: { route in
             route.path == initialPath
         })
         else {
-            printIfDebug("\(type(of: self)) \(#function) // TODO: return error: route not found")
-            return nil
+            printIfDebug("\(type(of: self)) \(#function) error: route not found.")
+            return .failure(.routeNotFound)
         }
         
         guard let loadComponent = route.loadComponent
         else {
-            printIfDebug("\(type(of: self)) \(#function) // TODO: return error: expect loadComponent is not nil")
-            return nil
+            printIfDebug("\(type(of: self)) \(#function) error: expect loadComponent is not nil.")
+            return .failure(.badRoute("expect loadComponent is not nil."))
         }
         
         let component = loadComponent()
@@ -34,6 +39,6 @@ extension Module {
         
         let viewController = UIHostingController(rootView: rootView)
         
-        return viewController
+        return .success(viewController)
     }
 }
