@@ -8,6 +8,8 @@
 import UIKit
 import SwiftUI
 
+let navigationController = UINavigationController()
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -18,31 +20,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        
-        // TODO: logic to handle Routes
-        
-        let routes = appRoutes
-        
-        var rootView: AnyView?
-        
-        routes.forEach { route in
-            switch (route.path) {
-            case "":
-                guard let component = route.component else { break }
-                rootView = AnyView(component.createInstance())
-                break
-            default:
-                break
-            }
-        }
-        
-        // end of TODO
-        
+
         window = UIWindow(windowScene: windowScene)
         
-        let rootViewController = UIHostingController(rootView: rootView)
+        guard let rootViewController = appModule.loadInitialPath()
+        else { return }
         
-        let navigationController = UINavigationController(rootViewController: rootViewController)
+        navigationController.pushViewController(rootViewController, animated: true)
+        
+//        navigationController.setNavigationBarHidden(true, animated: false)
         
         window?.rootViewController = navigationController
         

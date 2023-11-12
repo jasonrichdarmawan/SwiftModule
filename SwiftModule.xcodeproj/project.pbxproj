@@ -26,6 +26,11 @@
 		964B4D752AFB1C0400470E31 /* App2SecondPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B4D742AFB1C0400470E31 /* App2SecondPage.swift */; };
 		964B4D782AFB1C3A00470E31 /* App2FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B4D772AFB1C3A00470E31 /* App2FirstViewModel.swift */; };
 		964B4D7A2AFB1C4900470E31 /* App2SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B4D792AFB1C4900470E31 /* App2SecondViewModel.swift */; };
+		967124B82B01016100E0DCB4 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967124B72B01016100E0DCB4 /* Module.swift */; };
+		967124BA2B01018100E0DCB4 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967124B92B01018100E0DCB4 /* AppModule.swift */; };
+		967124C02B01084C00E0DCB4 /* App1Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967124BF2B01084C00E0DCB4 /* App1Module.swift */; };
+		967124C22B0109C800E0DCB4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967124C12B0109C700E0DCB4 /* Router.swift */; };
+		967124C42B0113CD00E0DCB4 /* App2Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967124C32B0113CD00E0DCB4 /* App2Module.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +57,11 @@
 		964B4D742AFB1C0400470E31 /* App2SecondPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App2SecondPage.swift; sourceTree = "<group>"; };
 		964B4D772AFB1C3A00470E31 /* App2FirstViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App2FirstViewModel.swift; sourceTree = "<group>"; };
 		964B4D792AFB1C4900470E31 /* App2SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App2SecondViewModel.swift; sourceTree = "<group>"; };
+		967124B72B01016100E0DCB4 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		967124B92B01018100E0DCB4 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
+		967124BF2B01084C00E0DCB4 /* App1Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App1Module.swift; sourceTree = "<group>"; };
+		967124C12B0109C700E0DCB4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		967124C32B0113CD00E0DCB4 /* App2Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App2Module.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +107,6 @@
 			children = (
 				964B4D232AFAA98A00470E31 /* AppDelegate.swift */,
 				964B4D252AFAA98A00470E31 /* SceneDelegate.swift */,
-				964B4D4A2AFAB08A00470E31 /* AppRouting.swift */,
-				964B4D3C2AFAABED00470E31 /* AppViewModel.swift */,
-				964B4D372AFAAA7A00470E31 /* AppPage.swift */,
 				964B4D4C2AFAB09800470E31 /* Core */,
 				964B4D6A2AFB1B3000470E31 /* Utils */,
 				964B4D3F2AFAAE0300470E31 /* Features */,
@@ -127,6 +134,7 @@
 		964B4D3F2AFAAE0300470E31 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				967124BB2B0101CD00E0DCB4 /* app */,
 				964B4D402AFAAE0A00470E31 /* app1 */,
 				964B4D6D2AFB1BAB00470E31 /* app2 */,
 			);
@@ -138,6 +146,7 @@
 			children = (
 				964B4D412AFAAE0F00470E31 /* Presentation */,
 				964B4D482AFAAFBD00470E31 /* App1Routing.swift */,
+				967124BF2B01084C00E0DCB4 /* App1Module.swift */,
 			);
 			path = app1;
 			sourceTree = "<group>";
@@ -182,6 +191,8 @@
 			children = (
 				964B4D512AFAB9A900470E31 /* Component.swift */,
 				964B4D4E2AFAB0A800470E31 /* Route.swift */,
+				967124B72B01016100E0DCB4 /* Module.swift */,
+				967124C12B0109C700E0DCB4 /* Router.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -199,6 +210,7 @@
 			children = (
 				964B4D702AFB1BCD00470E31 /* Presentation */,
 				964B4D6E2AFB1BB500470E31 /* App2Routing.swift */,
+				967124C32B0113CD00E0DCB4 /* App2Module.swift */,
 			);
 			path = app2;
 			sourceTree = "<group>";
@@ -226,6 +238,41 @@
 			children = (
 				964B4D772AFB1C3A00470E31 /* App2FirstViewModel.swift */,
 				964B4D792AFB1C4900470E31 /* App2SecondViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		967124BB2B0101CD00E0DCB4 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				967124BC2B0101DB00E0DCB4 /* Presentation */,
+				964B4D4A2AFAB08A00470E31 /* AppRouting.swift */,
+				967124B92B01018100E0DCB4 /* AppModule.swift */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		967124BC2B0101DB00E0DCB4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				967124BE2B0101E500E0DCB4 /* ViewModels */,
+				967124BD2B0101E000E0DCB4 /* Pages */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		967124BD2B0101E000E0DCB4 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				964B4D372AFAAA7A00470E31 /* AppPage.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		967124BE2B0101E500E0DCB4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				964B4D3C2AFAABED00470E31 /* AppViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -299,7 +346,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				967124C22B0109C800E0DCB4 /* Router.swift in Sources */,
 				964B4D4F2AFAB0A800470E31 /* Route.swift in Sources */,
+				967124BA2B01018100E0DCB4 /* AppModule.swift in Sources */,
+				967124C42B0113CD00E0DCB4 /* App2Module.swift in Sources */,
 				964B4D472AFAAE8200470E31 /* App1FirstViewModel.swift in Sources */,
 				964B4D382AFAAA7A00470E31 /* AppPage.swift in Sources */,
 				964B4D6C2AFB1B3D00470E31 /* printIfDebug.swift in Sources */,
@@ -308,6 +358,7 @@
 				964B4D442AFAAE3600470E31 /* App1FirstPage.swift in Sources */,
 				964B4D242AFAA98A00470E31 /* AppDelegate.swift in Sources */,
 				964B4D562AFABA0A00470E31 /* App1SecondViewModel.swift in Sources */,
+				967124B82B01016100E0DCB4 /* Module.swift in Sources */,
 				964B4D732AFB1BE500470E31 /* App2FirstPage.swift in Sources */,
 				964B4D4B2AFAB08A00470E31 /* AppRouting.swift in Sources */,
 				964B4D6F2AFB1BB500470E31 /* App2Routing.swift in Sources */,
@@ -317,6 +368,7 @@
 				964B4D7A2AFB1C4900470E31 /* App2SecondViewModel.swift in Sources */,
 				964B4D262AFAA98A00470E31 /* SceneDelegate.swift in Sources */,
 				964B4D522AFAB9A900470E31 /* Component.swift in Sources */,
+				967124C02B01084C00E0DCB4 /* App1Module.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

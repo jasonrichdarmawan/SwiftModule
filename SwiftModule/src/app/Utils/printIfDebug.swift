@@ -7,8 +7,12 @@
 
 import Foundation
 
-func printIfDebug<T>(instanceType: T, functionName: any ExpressibleByStringLiteral, id: UUID) {
+func printIfDebug(
+    _ items: Any...,
+    separator: String = " ",
+    terminator: String = "\n"
+) {
     #if DEBUG
-    print("\(type(of: instanceType)) \(functionName) \(id)")
+    print(items, separator: separator, terminator: terminator)
     #endif
 }

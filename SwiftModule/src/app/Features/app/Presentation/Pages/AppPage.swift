@@ -10,10 +10,6 @@ import SwiftUI
 struct AppPage: Component {
     @ObservedObject var viewModel: AppViewModel
     
-    static func createInstance() -> AppPage {
-        return AppPage(viewModel: AppViewModel())
-    }
-    
     var body: some View {
         VStack {
             HStack {
@@ -22,7 +18,7 @@ struct AppPage: Component {
             }
             HStack {
                 Button {
-                    
+                    Router.route(path: "app1/firstPage")
                 } label: {
                     Text("Go to App1FirstPage")
                 }

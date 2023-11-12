@@ -9,7 +9,26 @@ import Foundation
 
 struct Route {
     var path: String
-    var component: (any Component.Type)?
+    /**
+     - TODO: loadComponent accept parameters.
+     ```
+     Route(
+         path: "firstPage/:id",
+         loadComponent: { params in
+             return App1FirstPage(
+                 viewModel: App1FirstViewModel(
+                     id: params.id
+                 )
+             )
+         }
+     )
+     ```
+     */
+    var loadComponent: (() -> any Component)?
+    /**
+     - TODO: loadChildren accept parameters
+     */
+    var loadChildren: (() -> Module)?
 }
 
 typealias Routes = [Route]

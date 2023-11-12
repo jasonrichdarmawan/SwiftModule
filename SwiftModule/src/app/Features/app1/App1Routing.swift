@@ -10,10 +10,18 @@ import Foundation
 let app1Routes: Routes = [
     Route(
         path: "firstPage",
-        component: App1FirstPage.self
+        loadComponent: {
+            return App1FirstPage(
+                viewModel: App1FirstViewModel()
+            )
+        }
     ),
     Route(
         path: "secondPage",
-        component: App1SecondPage.self
+        loadComponent: {
+            return App1SecondPage(
+                viewModel: App1SecondViewModel()
+            )
+        }
     )
 ]

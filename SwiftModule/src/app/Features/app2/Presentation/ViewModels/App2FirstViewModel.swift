@@ -13,10 +13,10 @@ final class App2FirstViewModel: ObservableObject {
     init(
     ) {
         self.id = UUID()
-        printIfDebug(instanceType: self, functionName: #function, id: id)
+        printIfDebug("\(type(of: self)) \(#function) \(id)")
     }
     
     deinit {
-        printIfDebug(instanceType: self, functionName: #function, id: id)
+        printIfDebug("\(type(of: self)) \(#function) \(id)")
     }
 }

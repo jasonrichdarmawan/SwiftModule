@@ -10,22 +10,18 @@ import SwiftUI
 struct App1SecondPage: Component {
     @ObservedObject var viewModel: App1SecondViewModel
     
-    static func createInstance() -> App1SecondPage {
-        App1SecondPage(viewModel: App1SecondViewModel())
-    }
-    
     var body: some View {
         VStack {
             HStack {
-                Text("App1FirstPage works!")
+                Text("App1SecondPage works!")
                 Spacer()
             }
             
             HStack {
                 Button {
-                    
+                    Router.route(path: "app2/firstPage")
                 } label: {
-                    Text("Go to App1SecondPage")
+                    Text("Go to App2FirstPage")
                 }
                 Spacer()
             }

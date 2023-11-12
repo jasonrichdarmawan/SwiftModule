@@ -9,7 +9,21 @@ AppRouting.swift
 let appRoutes: Routes = [
     Route(
         path: "",
-        component: AppPage.self
+        loadComponent: {
+            return AppPage(viewModel: AppViewModel())
+        }
+    ),
+    Route(
+        path: "app1",
+        loadChildren: {
+            return app1Module
+        }
+    ),
+    Route(
+        path: "app2",
+        loadChildren: {
+            return app2Module
+        }
     )
 ]
 ```
@@ -19,10 +33,6 @@ AppPage.swift
 struct AppPage: Component {
     @ObservedObject var viewModel: AppViewModel
     
-    static func createInstance() -> AppPage {
-        return AppPage(viewModel: AppViewModel())
-    }
-    
     var body: some View {
         VStack {
             HStack {
@@ -31,7 +41,7 @@ struct AppPage: Component {
             }
             HStack {
                 Button {
-                    
+                    Router.route(path: "app1/firstPage")
                 } label: {
                     Text("Go to App1FirstPage")
                 }

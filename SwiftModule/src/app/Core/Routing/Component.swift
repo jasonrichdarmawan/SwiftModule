@@ -8,5 +8,4 @@
 import SwiftUI
 
 protocol Component: View {
-    static func createInstance() -> Self
 }
