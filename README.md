@@ -14,7 +14,7 @@ let appRoutes: Routes = [
     Route(
         path: "",
         loadComponent: {
-            return AppPage(viewModel: AppViewModel())
+            return AppPage(viewModel: AppViewModel.shared())
         }
     ),
     Route(
@@ -55,6 +55,43 @@ struct AppPage: Component {
         }
     }
 }
+```
+
+# FAQ
+
+1. What is inside the `app1Module`?
+
+App1Module.swift
+```
+let app1Module = Module(
+    initialPath: "firstPage",
+    routes: app1Routes
+)
+```
+
+App1Routing.swift
+```
+let app1Routes: Routes = [
+    Route(
+        path: "firstPage",
+        loadComponent: {
+            return App1FirstPage(
+                appViewModel: AppViewModel.shared(),
+                viewModel: App1FirstViewModel.shared(
+                    counter: 3
+                )
+            )
+        }
+    ),
+    Route(
+        path: "secondPage",
+        loadComponent: {
+            return App1SecondPage(
+                viewModel: App1SecondViewModel.shared()
+            )
+        }
+    )
+]
 ```
 
 # First Priority To Do
